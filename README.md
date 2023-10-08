@@ -59,11 +59,16 @@ clean test
 
 <a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/jenkins_build.png" alt="Jenkins"/></a>
 
+## <img alt="Selenoid" height="25" src="mediafiles/icons/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
+____
+<p align="center">
+<img title="Selenoid Video" src="mediafiles/screenshots/test.gif" width="550" height="350"  alt="video">   
+</p>
+
 <a id="telegram"></a>
 ## <img src="media/logos/Telegram.svg" width="25" height="25"/></a> Уведомления в Telegram
 
 <p >
-
 > С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram.
 
 <img title="telegram bot" src="media/screenshots/telegram.png">
@@ -75,14 +80,6 @@ clean test
 
 <p align="center">
 <img title="Allure Dashboard" src="media/screenshots/allure_dashboard.png">
-</p>
-
-
-## <img alt="Selenoid" height="25" src="mediafiles/icons/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
-
-____
-<p align="center">
-<img title="Selenoid Video" src="mediafiles/screenshots/test.gif" width="550" height="350"  alt="video">   
 </p>
 
 ### Отчеты по тестам
