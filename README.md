@@ -75,7 +75,7 @@ ____
 </p>
 
 <a id="allure"></a>
-## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/career_habr_tests/allure/)отчеты
+## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/career_habr_tests/allure/) отчеты
 ### Основное окно
 
 <p align="center">
