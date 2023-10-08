@@ -70,7 +70,7 @@ clean test
 </p>
 
 <a id="allure"></a>
-## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/EphimSh_qa_guru_20_heroku_restfulbooker/allure/) отчеты
+## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/career_habr_tests/allure/)отчеты
 ### Основное окно
 
 <p align="center">
@@ -87,7 +87,7 @@ clean test
 </p>
 
 <a id="allure-testops"></a>
-## <img src="media/logos/AllureTestOps.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/30743)
+## <img src="media/logos/AllureTestOps.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3704/dashboards)
 
 ### Основное окно
 
@@ -102,7 +102,7 @@ clean test
 </p>
 
 <a id="jira"></a>
-## <img src="media/logos/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-907)
+## <img src="media/logos/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-908)
 
 <p align="center">
 <img title="Jira" src="media/screenshots/jira.png">
