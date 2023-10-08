@@ -29,14 +29,17 @@
 | <a href="https://www.java.com/"><img src="media/logos/Java.svg" width="50" height="50"  alt="Java"/></a> | <div align="center"><a id ="tech" href="https://www.jetbrains.com/idea/"><img src="media/logos/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a></div> | <a href="https://github.com/allure-framework"><img src="media/logos/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a> | <div align="center"><a href="https://qameta.io/"><img src="media/logos/AllureTestOps.svg" width="50" height="50"  alt="Allure TestOps"/></a></div> | <a href="https://github.com/"><img src="media/logos/GitHub.svg" width="50" height="50"  alt="Github"/></a> | <a href="https://junit.org/junit5/"><img src="media/logos/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a> | <a href="https://gradle.org/"><img src="media/logos/Gradle.svg" width="50" height="50"  alt="Gradle"/></a> | <div align="center"><a href="https://rest-assured.io/"><img src="media/logos/RestAssured.svg" width="50" height="50"  alt="RestAssured"/></a></div>  |   <a href="https://www.jenkins.io/"><img src="media/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a> | <a href="https://www.atlassian.com/ru/software/jira"><img src="media/logos/Jira.svg" width="50" height="50"  alt="Jira"/></a> | <a href="https://aerokube.com/selenoid/"><img src="media/logos/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a> |
 
 
-Автотесты в этом проекте написаны на Java .\
-<code>Gradle</code> — используется как инструмент автоматизации сборки.\
-<code>JUnit5</code> — для выполнения тестов.\
-<code>REST Assured</code> — для тестирования REST-API сервисов.\
-<code>Allure Report</code> — для визуализации результатов тестирования.\
-<code>Allure TestOps</code> — как система управления тестированием.\
-<code>Jira</code> — как инструмент управления проектом и таск-трекер.\
-<code>Telegram Bot</code> — для уведомлений о результатах тестирования.
+Автотесты в этом проекте написаны на Java.
+
+- <code>Gradle</code> — используется как инструмент автоматизации сборки.
+- <code>JUnit5</code> — для выполнения тестов.
+- <code>REST Assured</code> — для тестирования REST-API сервисов.
+- <code>Allure Report</code> — для визуализации результатов тестирования.
+- <code>Allure TestOps</code> — как система управления тестированием.
+- <code>Jira</code> — как инструмент управления проектом и таск-трекер.
+- <code>Telegram Bot</code> — для уведомлений о результатах тестирования.
+- <code>Selenoid</code> — использовался для быстрого прогона тестов с возможностью получения видеозаписей тестов.
+
 
 
 <a id="console"></a>
