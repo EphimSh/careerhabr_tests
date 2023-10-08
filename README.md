@@ -51,7 +51,7 @@ clean test
 ```
 
 <a id="jenkins"></a>
-## <img src="media/logos/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/EphimSh_qa_guru_20_heroku_restfulbooker/)
+## <img src="media/logos/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/career_habr_tests/)
 
 <p align="center">
 
