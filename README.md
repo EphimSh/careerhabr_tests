@@ -1,6 +1,6 @@
 # [career.habr.com](https://career.habr.com/) autotests
 
-<h1 >Демопроект автоматизации тестирования API на <a href="https://restful-booker.herokuapp.com/apidoc/index.html">restful-booker</a></h1>
+<h1>Демопроект автоматизации ui-тестов на career.habr</h1>
 
 ##  Содержание 
 
@@ -24,22 +24,22 @@
 <a id="tools"></a>
 ## Технологии и инструменты
 
-| Java | IntelliJ Idea | Allure | Allure TestOps | GitHub | JUnit 5 | Gradle | REST Assured | Jenkins | Jira |
-| ---- | ------------- | ------ | ------------- | ------ | -------| ------ | ------------| --------| ----- |
-| <a href="https://www.java.com/"><img src="media/logos/Java.svg" width="50" height="50"  alt="Java"/></a> | <div align="center"><a id ="tech" href="https://www.jetbrains.com/idea/"><img src="media/logos/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a></div> | <a href="https://github.com/allure-framework"><img src="media/logos/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a> | <div align="center"><a href="https://qameta.io/"><img src="media/logos/AllureTestOps.svg" width="50" height="50"  alt="Allure TestOps"/></a></div> | <a href="https://github.com/"><img src="media/logos/GitHub.svg" width="50" height="50"  alt="Github"/></a> | <a href="https://junit.org/junit5/"><img src="media/logos/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a> | <a href="https://gradle.org/"><img src="media/logos/Gradle.svg" width="50" height="50"  alt="Gradle"/></a> | <div align="center"><a href="https://rest-assured.io/"><img src="media/logos/RestAssured.svg" width="50" height="50"  alt="RestAssured"/></a></div>  |   <a href="https://www.jenkins.io/"><img src="media/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a> | <a href="https://www.atlassian.com/ru/software/jira"><img src="media/logos/Jira.svg" width="50" height="50"  alt="Jira"/></a> |
+| Java | IntelliJ Idea | Allure | Allure TestOps | GitHub | JUnit 5 | Gradle | REST Assured | Jenkins | Jira | Selenoid |
+| ---- | ------------- | ------ | ------------- | ------ | -------| ------ | ------------| --------| ----- | -------- |
+| <a href="https://www.java.com/"><img src="media/logos/Java.svg" width="50" height="50"  alt="Java"/></a> | <div align="center"><a id ="tech" href="https://www.jetbrains.com/idea/"><img src="media/logos/Intelij_IDEA.svg" width="50" height="50"  alt="IDEA"/></a></div> | <a href="https://github.com/allure-framework"><img src="media/logos/Allure_Report.svg" width="50" height="50"  alt="Allure"/></a> | <div align="center"><a href="https://qameta.io/"><img src="media/logos/AllureTestOps.svg" width="50" height="50"  alt="Allure TestOps"/></a></div> | <a href="https://github.com/"><img src="media/logos/GitHub.svg" width="50" height="50"  alt="Github"/></a> | <a href="https://junit.org/junit5/"><img src="media/logos/JUnit5.svg" width="50" height="50"  alt="JUnit 5"/></a> | <a href="https://gradle.org/"><img src="media/logos/Gradle.svg" width="50" height="50"  alt="Gradle"/></a> | <div align="center"><a href="https://rest-assured.io/"><img src="media/logos/RestAssured.svg" width="50" height="50"  alt="RestAssured"/></a></div>  |   <a href="https://www.jenkins.io/"><img src="media/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a> | <a href="https://www.atlassian.com/ru/software/jira"><img src="media/logos/Jira.svg" width="50" height="50"  alt="Jira"/></a> | <a href="https://aerokube.com/selenoid/"><img src="media/logos/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a> |
 
 
+Автотесты в этом проекте написаны на Java.
 
+- <code>Gradle</code> — используется как инструмент автоматизации сборки.
+- <code>JUnit5</code> — для выполнения тестов.
+- <code>REST Assured</code> — для тестирования REST-API сервисов.
+- <code>Allure Report</code> — для визуализации результатов тестирования.
+- <code>Allure TestOps</code> — как система управления тестированием.
+- <code>Jira</code> — как инструмент управления проектом и таск-трекер.
+- <code>Telegram Bot</code> — для уведомлений о результатах тестирования.
+- <code>Selenoid</code> — использовался для быстрого прогона тестов с возможностью получения видеозаписей тестов.
 
-
-Автотесты в этом проекте написаны на Java .\
-<code>Gradle</code> — используется как инструмент автоматизации сборки.\
-<code>JUnit5</code> — для выполнения тестов.\
-<code>REST Assured</code> — для тестирования REST-API сервисов.\
-<code>Allure Report</code> — для визуализации результатов тестирования.\
-<code>Allure TestOps</code> — как система управления тестированием.\
-<code>Jira</code> — как инструмент управления проектом и таск-трекер.\
-<code>Telegram Bot</code> — для уведомлений о результатах тестирования.
 
 
 <a id="console"></a>
@@ -51,7 +51,7 @@ clean test
 ```
 
 <a id="jenkins"></a>
-## <img src="media/logos/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/EphimSh_qa_guru_20_heroku_restfulbooker/)
+## <img src="media/logos/Jenkins.svg" width="25" height="25"/></a> Запуск тестов в [Jenkins](https://jenkins.autotests.cloud/job/career_habr_tests/)
 
 <p align="center">
 
@@ -59,22 +59,27 @@ clean test
 
 <a href="https://jenkins.autotests.cloud/job/AD_demo_api_reqres/"><img src="media/screenshots/jenkins_build.png" alt="Jenkins"/></a>
 
+## <img alt="Selenoid" height="25" src="media/logos/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
+____
+<p align="center">
+<img title="Selenoid Video" src="mediafiles/screenshots/test.gif" width="550" height="350"  alt="video">   
+</p>
+
 <a id="telegram"></a>
 ## <img src="media/logos/Telegram.svg" width="25" height="25"/></a> Уведомления в Telegram
 
 <p >
-
 > С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram.
 
 <img title="telegram bot" src="media/screenshots/telegram.png">
 </p>
 
 <a id="allure"></a>
-## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/EphimSh_qa_guru_20_heroku_restfulbooker/allure/) отчеты
+## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/career_habr_tests/allure/)отчеты
 ### Основное окно
 
 <p align="center">
-<img title="Allure Dashboard" src="media/screenshots/allure_report_dashboard.png">
+<img title="Allure Dashboard" src="media/screenshots/allure_dashboard.png">
 </p>
 
 ### Отчеты по тестам
@@ -83,11 +88,11 @@ clean test
 
 > В отчете по тестам присутствует развернутая информация по запросам и ответам.
 
-<img title="Allure Tests" src="media/screenshots/allure_report_testcase.png">
+<img title="Allure Tests" src="media/screenshots/allure_testcase.png">
 </p>
 
 <a id="allure-testops"></a>
-## <img src="media/logos/AllureTestOps.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/30743)
+## <img src="media/logos/AllureTestOps.svg" width="25" height="25"/></a> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3704/dashboards)
 
 ### Основное окно
 
@@ -102,7 +107,7 @@ clean test
 </p>
 
 <a id="jira"></a>
-## <img src="media/logos/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-907)
+## <img src="media/logos/Jira.svg" width="25" height="25"/></a> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-908)
 
 <p align="center">
 <img title="Jira" src="media/screenshots/jira.png">
