@@ -3,14 +3,17 @@ package careerhabr.config;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources("classpath:config/${env}.properties")
+@Config.Sources({
+        "system:properties",
+        "classpath:config/${env}.properties"
+})
 public interface WebConfig extends Config {
 
     @Key("browser")
     @DefaultValue("chrome")
     String getBrowser();
 
-    @Key("browserversion")
+    @Key("browserVersion")
     @DefaultValue("116.0")
     String getBrowserVersion();
 
@@ -18,16 +21,16 @@ public interface WebConfig extends Config {
     @DefaultValue("https://career.habr.com/")
     String getBaseUrl();
 
-    @Key("browsersize")
+    @Key("browserSize")
     @DefaultValue("1980x1180")
     String getBrowserSize();
-    @Key("pageloadstrategy")
+    @Key("pageLoadStrategy")
     String getPageLoadStrategy();
 
-    @Key("remoteurl")
+    @Key("remoteUrl")
     String getRemoteUrl();
 
-    @Key("apibasepath")
+    @Key("apiBasePath")
     @DefaultValue("api/frontend/")
     String getBasePath();
 
