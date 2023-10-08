@@ -74,7 +74,7 @@ clean test
 ### Основное окно
 
 <p align="center">
-<img title="Allure Dashboard" src="media/screenshots/allure_report_dashboard.png">
+<img title="Allure Dashboard" src="media/screenshots/allure_dashboard.png">
 </p>
 
 ### Отчеты по тестам
@@ -83,7 +83,7 @@ clean test
 
 > В отчете по тестам присутствует развернутая информация по запросам и ответам.
 
-<img title="Allure Tests" src="media/screenshots/allure_report_testcase.png">
+<img title="Allure Tests" src="media/screenshots/allure_testcase.png">
 </p>
 
 <a id="allure-testops"></a>
