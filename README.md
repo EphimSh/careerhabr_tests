@@ -1,6 +1,6 @@
 # [career.habr.com](https://career.habr.com/) autotests
 
-<h1 >Демопроект автоматизации тестирования API на <a href="https://restful-booker.herokuapp.com/apidoc/index.html">restful-booker</a></h1>
+<h1 >Демопроект автоматизации ui-тестов на <a href="https://career.habr.com/">career.habr</a></h1>
 
 ##  Содержание 
 
