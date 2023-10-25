@@ -14,7 +14,6 @@ public interface WebConfig extends Config {
     String getBrowser();
 
     @Key("browserVersion")
-    @DefaultValue("116.0")
     String getBrowserVersion();
 
     @Key("baseURL")
