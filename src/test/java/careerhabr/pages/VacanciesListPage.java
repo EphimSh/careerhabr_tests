@@ -13,9 +13,12 @@ import static com.codeborne.selenide.Selenide.$$;
 public class VacanciesListPage extends SpecializationPicker {
     private static final SelenideElement
             searchResult = $(".section-group"),
-            specializationPicker = $(".specs-picker__specs");
+            specializationPicker = $(".specs-picker__specs"),
+            suggestionResults = $(".suggestion-results");
     String sideBarFilterList = ".list-page-sidebar__filters";
     String suggestionList = ".suggestion-items div";
+
+
 
     @Step("Check searched result")
     public VacanciesListPage checkResult(String text) {
@@ -50,6 +53,24 @@ public class VacanciesListPage extends SpecializationPicker {
                 .find(text(skill))
                 .hover()
                 .click();
+        return this;
+    }
+//    "suggestion-results__empty"
+
+    @Step("Select skill")
+    public VacanciesListPage searchSkill(String skill) {
+        $$(sideBarFilterList)
+                .find(exist)
+                .find(byAttribute("placeholder", "Выберите навык"))
+                .hover().sendKeys(skill);
+        return this;
+    }
+
+    @Step("Select skill")
+    public VacanciesListPage checkSuggestionResultMessage(String message) {
+        suggestionResults
+                .should(exist)
+                .shouldHave(text(message));
         return this;
     }
 
