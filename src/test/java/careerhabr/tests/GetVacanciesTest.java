@@ -1,6 +1,5 @@
 package careerhabr.tests;
 
-import careerhabr.api.models.ResumeResponseModel;
 import careerhabr.api.models.VacancyResponseModel;
 import careerhabr.pages.MainPage;
 import careerhabr.pages.VacancyPage;
@@ -14,13 +13,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import static careerhabr.api.spec.Specification.*;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
