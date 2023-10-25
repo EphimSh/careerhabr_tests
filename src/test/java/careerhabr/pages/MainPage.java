@@ -8,8 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
     private static SelenideElement
-            searchInput = $("[name=q]"),
-            switchButton = $("a[class*=switch-button]");
+            searchInput = $("[name=q]");
 
 
     @Step("Open main page")
@@ -24,5 +23,12 @@ public class MainPage {
         searchInput.pressEnter();
         return this;
     }
+
+    @Step("Open main page")
+    public MainPage openFavicon(){
+        open("https://career.habr.com/images/favicons/favicon-16.png");
+        return this;
+    }
+
 
 }
