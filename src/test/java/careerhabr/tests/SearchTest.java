@@ -13,19 +13,27 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.Properties;
+
 @Owner("EphimSh")
 @Feature("Search")
 @Tag("ui")
 public class SearchTest extends TestBase {
 
+    private static Properties loadProperties() {
+        Properties properties = new Properties();
+        try (InputStreamReader input = new InputStreamReader(SearchTest.class.getClassLoader().getResourceAsStream("config/search-testdata.properties"), StandardCharsets.UTF_8)) {
+            properties.load(input);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties;
+    }
+    private static final Properties props = loadProperties();
     private static final Faker faker = new Faker();
-    private static final String VACANCY = "QA";
-    private static final String SPECIZLIZATION_CATEGORY = "Тестирование";
-    private static final String SPECIZLIZATION_GROUP = "Инженер по автоматизации тестирования";
-    private static final String DE_LIST_COMPANY = "Aston (ex. Andersen)";
-    private static final String CITY = "Санкт-Петербург";
-    private static final String SKILL = "Java";
-    private static final String COMPANY = "VK";
     private static final MainPage mainPage = new MainPage();
     private static final VacanciesListPage vacanciesListPage = new VacanciesListPage();
 
@@ -46,8 +54,8 @@ public class SearchTest extends TestBase {
     @Description("This test searches for vacancies by a specific company.")
     void searchByCompany() {
         mainPage.openMainPage();
-        mainPage.search(COMPANY);
-        vacanciesListPage.checkResult(COMPANY);
+        mainPage.search(props.getProperty("company"));
+        vacanciesListPage.checkResult(props.getProperty("company"));
     }
 
     @Test
@@ -61,25 +69,37 @@ public class SearchTest extends TestBase {
     }
 
     @Test
-    @Story("Using filter side-bar")
+    @Story("Filter side-bar")
     @DisplayName("Search with Filter")
     @Description("This test performs a filtered search and checks the results.")
     void searchWithFilter() {
         mainPage.openMainPage();
-        mainPage.search(VACANCY);
+        mainPage.search(props.getProperty("vacancy"));
 
         vacanciesListPage.specPickerClick();
-        vacanciesListPage.selectGroup(SPECIZLIZATION_CATEGORY);
-        vacanciesListPage.selectSpecificSpecialization(SPECIZLIZATION_GROUP);
+        vacanciesListPage.selectGroup(props.getProperty("specialization_group"));
+        vacanciesListPage.selectSpecificSpecialization(props.getProperty("specialization"));
         vacanciesListPage.submit();
         vacanciesListPage.selectQualification();
-        vacanciesListPage.selectSkill(SKILL);
-        vacanciesListPage.selectLocation(CITY);
+        vacanciesListPage.selectSkill(props.getProperty("skill"));
+        vacanciesListPage.selectLocation(props.getProperty("city"));
         vacanciesListPage.selectEmploymentType();
-        vacanciesListPage.deListCompany(DE_LIST_COMPANY);
+        vacanciesListPage.deListCompany(props.getProperty("de_list_company"));
 
-        vacanciesListPage.checkResult(VACANCY);
-        vacanciesListPage.checkResult(SKILL);
-        vacanciesListPage.checkResult(CITY);
+        vacanciesListPage.checkResult(props.getProperty("vacancy"));
+        vacanciesListPage.checkResult(props.getProperty("skill"));
+        vacanciesListPage.checkResult(props.getProperty("city"));
+    }
+
+    @Test
+    @Story("Filter side-bar")
+    @DisplayName("Empty list message check")
+    @Description("This test checks if a specific message appears when searching with an invalid skill.")
+    void skillFilterCheck() {
+        mainPage.openMainPage();
+        mainPage.search(props.getProperty("vacancy"));
+        vacanciesListPage.searchSkill("--");
+        vacanciesListPage.checkSuggestionResultMessage("Ничего не найдено");
+
     }
 }
