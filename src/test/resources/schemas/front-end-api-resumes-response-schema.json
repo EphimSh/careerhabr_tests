@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "href": { "type": "string" },
+          "conversationHref": { "type": ["string", "null"] },
+          "avatar": {
+            "type": "object",
+            "properties": {
+              "src": { "type": "string" },
+              "src2x": { "type": "string" }
+            },
+            "required": ["src", "src2x"]
+          },
+          "lastVisited": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "date": { "type": "string" }
+            },
+            "required": ["title", "date"]
+          },
+          "specialization": { "type": ["string", "null"] },
+          "qualification": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "value": { "type": "integer" }
+            },
+            "required": ["title", "value"]
+          },
+          "salary": {
+            "type":["object","null"],
+            "properties": {
+              "title": { "type": "string" },
+              "value": { "type": "integer" },
+              "currency": { "type": "string" }
+            },
+            "required": ["title", "value", "currency"]
+          },
+          "availability": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "value": { "type": "string" }
+            },
+            "required": ["title", "value"]
+          },
+          "location": {
+            "type": ["object", "null"],
+            "properties": {
+              "title": { "type": "string" },
+              "name": { "type": "string" },
+              "href": { "type": "string" },
+              "value": { "type": "integer" }
+            },
+            "required": ["title", "name", "href", "value"]
+          },
+          "remoteWork": { "type": "boolean" },
+          "relocation": { "type": "boolean" },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "href": { "type": "string" },
+                "value": { "type": "integer" }
+              },
+              "required": ["title", "href", "value"]
+            }
+          },
+          "age": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "value": { "type": "integer" }
+            },
+            "required": ["title", "value"]
+          },
+          "experience": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "value": { "type": "integer" }
+            },
+            "required": ["title", "value"]
+          },
+          "lastJob": {
+            "type": "object",
+            "properties": {
+              "position": { "type": "string" },
+              "company": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "href": { "type": ["string", "null"] }
+                },
+                "required": ["title", "href"]
+              },
+              "duration": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "value": { "type": "integer" }
+                },
+                "required": ["title", "value"]
+              }
+            },
+            "required": ["position", "company", "duration"]
+          },
+          "education": {
+            "type": ["object", "null"],
+            "properties": {
+              "university": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "href": { "type": "string" }
+                },
+                "required": ["title", "href"]
+              },
+              "faculty": { "type": "string" },
+              "duration": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "value": { "type": "integer" }
+                },
+                "required": ["title", "value"]
+              }
+            }
+          },
+          "additionalEducation": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" }
+              },
+              "required": ["title"]
+            }
+          },
+          "communities": {
+            "type": "array",
+            "items": {}
+          },
+          "coworkers": {
+            "type": "array",
+            "items": {}
+          },
+          "specializations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" }
+              },
+              "required": ["title"]
+            }
+          },
+          "gender": { "type": ["integer", "null"] },
+          "isExpert": { "type": "boolean" },
+          "moreUniversityCount": { "type": ["integer", "null"] }
+        },
+        "required": [
+          "id",
+          "title",
+          "href",
+          "conversationHref",
+          "avatar",
+          "lastVisited",
+          "specialization",
+          "qualification",
+          "salary",
+          "availability",
+          "location",
+          "remoteWork",
+          "relocation",
+          "skills",
+          "age",
+          "experience",
+          "lastJob",
+          "education",
+          "additionalEducation",
+          "communities",
+          "coworkers",
+          "specializations",
+          "gender",
+          "isExpert",
+          "moreUniversityCount"
+        ]
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "totalResults": { "type": "integer" },
+        "perPage": { "type": "integer" },
+        "currentPage": { "type": "integer" },
+        "totalPages": { "type": "integer" }
+      },
+      "required": ["totalResults", "perPage", "currentPage", "totalPages"]
+    },
+    "limitedAccess": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "registerHref": { "type": "string" },
+        "loginHref": { "type": "string" }
+      },
+      "required": ["type", "registerHref", "loginHref"]
+    }
+  },
+  "required": ["list", "meta", "limitedAccess"]
+}

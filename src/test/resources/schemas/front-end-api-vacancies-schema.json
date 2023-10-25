@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "salary": {
+            "type": "object",
+            "properties": {
+              "currency": {
+                "type": ["string", "null"]
+              },
+              "from": {
+                "type": ["integer", "null"]
+              },
+              "to": {
+                "type": ["integer", "null"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
