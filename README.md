@@ -6,8 +6,6 @@
 
 * <a href="#tools">Технологии и инструменты</a>
 
-* <a href="#cases">Реализованные проверки</a>
-
 * <a href="#console">Запуск тестов из терминала</a>
 
 * <a href="#jenkins">Запуск тестов в Jenkins</a>
@@ -62,7 +60,7 @@ clean test
 ## <img alt="Selenoid" height="25" src="media/logos/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
 ____
 <p align="left">
-<img title="Selenoid Video" src="media/screenshots/sidebar_filter.gif" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="media/screenshots/sidebar_filter.gif" width="650" height="500"  alt="video">   
 </p>
 
 <a id="telegram"></a>
@@ -75,7 +73,7 @@ ____
 </p>
 
 <a id="allure"></a>
-## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/career_habr_tests/allure/)отчеты
+## <img src="media/logos/Allure_Report.svg" width="25" height="25"/></a> [Allure Report](https://jenkins.autotests.cloud/job/career_habr_tests/allure/) отчеты
 ### Основное окно
 
 <p align="center">
