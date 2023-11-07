@@ -60,7 +60,7 @@ clean test
 ## <img alt="Selenoid" height="25" src="media/logos/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
 ____
 <p align="left">
-<img title="Selenoid Video" src="media/screenshots/sidebar-filter-autotest.gif" width="1020" height="640"  alt="video">   
+<img title="Selenoid Video" src="media/screenshots/sidebar-filter-autotest.gif" width="830" height="485"  alt="video">   
 </p>
 
 <a id="telegram"></a>
