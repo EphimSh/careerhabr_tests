@@ -42,7 +42,7 @@
 
 ***Удалённый запуск реализован через сборку в  Jenkins:***
 
-```bash  
+bash  
 clean test
 
 <a id="jenkins"></a>
