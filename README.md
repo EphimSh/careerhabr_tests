@@ -41,6 +41,7 @@
 
 flowchart LR
     id1(This is the text in the box)
+end
 
 <a id="console"></a>
 
