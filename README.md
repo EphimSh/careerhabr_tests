@@ -60,11 +60,11 @@ clean test
 ## <img alt="Selenoid" height="25" src="media/logos/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
 ____
 <p align="left">
-<img title="Selenoid Video" src="media/screenshots/sidebar-filter-autotest.gif" width="600"   alt="video">   
+<img title="Selenoid Video" src="media/screenshots/sidebar-filter-autotest.gif" width="720"   alt="video">   
 </p>
 
 <a id="telegram"></a>
-## <img src="media/logos/Telegram.svg" width="25" height="25"/></a> Уведомления в Telegram
+## <img src="media/screenshots/telegram-notification.png" width="25" height="25"/></a> Уведомления в Telegram
 
 <p >
 > С помощью настроенного бота после завершения прогона в Jenkins поступают уведомления в Telegram.
@@ -77,7 +77,7 @@ ____
 ### Основное окно
 
 <p align="center">
-<img title="Allure Dashboard" src="media/screenshots/allure_dashboard.png">
+<img title="Allure Dashboard" src="media/screenshots/allure-report-dashboard.png">
 </p>
 
 ### Отчеты по тестам
@@ -86,7 +86,7 @@ ____
 
 > В отчете по тестам присутствует развернутая информация по запросам и ответам.
 
-<img title="Allure Tests" src="media/screenshots/allure_testcase.png">
+<img title="Allure Tests" src="media/screenshots/allure-report-testcase.png">
 </p>
 
 <a id="allure-testops"></a>
@@ -95,13 +95,13 @@ ____
 ### Основное окно
 
 <p align="center">
-<img title="Allure TestOps" src="media/screenshots/alluretestops_dashboard.png">
+<img title="Allure TestOps" src="media/screenshots/allure-testops-dashboard.png">
 </p>
 
 ### Иерархия тестов в ветке
 
 <p align="center">
-<img title="Allure TestOps" src="media/screenshots/alluretestops_testcase.png">
+<img title="Allure TestOps" src="media/screenshots/allure-testops-testcase.png">
 </p>
 
 <a id="jira"></a>
