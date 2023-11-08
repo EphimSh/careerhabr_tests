@@ -38,10 +38,6 @@
 - <code>Telegram Bot</code> — для уведомлений о результатах тестирования.
 - <code>Selenoid</code> — использовался для быстрого прогона тестов с возможностью получения видеозаписей тестов.
 
-flowchart LR
-    id1(This is the text in the box)
-end
-
 <a id="console"></a>
 
 ***Удалённый запуск реализован через сборку в  Jenkins:***
