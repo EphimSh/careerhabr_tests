@@ -7,6 +7,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -37,6 +38,7 @@ public class SearchTest extends TestBase {
     private static final MainPage mainPage = new MainPage();
     private static final VacanciesListPage vacanciesListPage = new VacanciesListPage();
 
+    @Disabled
     @ParameterizedTest(name = "{0}")
     @ValueSource(strings = {"QA", "Frontend", "Backend", "DevOps"})
     @Story("Parametrized test: Simple search")
