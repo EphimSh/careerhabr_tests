@@ -37,32 +37,7 @@
 - <code>Jira</code> — как инструмент управления проектом и таск-трекер.
 - <code>Telegram Bot</code> — для уведомлений о результатах тестирования.
 - <code>Selenoid</code> — использовался для быстрого прогона тестов с возможностью получения видеозаписей тестов.
-
-graph LR
-    subgraph User
-        input[Input Keywords] --> search(Search)
-        search -- |Retrieve Jobs| --> display(Display Jobs)
-        display -- |Select Job| --> apply(Apply)
-        apply -- |Submit Application| --> confirmation(Confirmation)
-    end
-
-    subgraph Website
-        search -- |Retrieve Jobs| --> retrieve(Retrieve Jobs)
-        retrieve -- |Filter and Sort| --> filter(Filter Jobs)
-        filter -- |Display Jobs| --> display
-        apply -- |Submit Application| --> submit(Submit Application)
-        submit -- |Process Application| --> process(Process Application)
-        process -- |Send Confirmation| --> confirmation
-    end
-
-    subgraph Database
-        retrieve -- |Retrieve Jobs| --> jobs(Jobs)
-        filter -- |Filter Jobs| --> filtered(Filter Jobs)
-        filtered -- |Sort Jobs| --> sorted(Sorted Jobs)
-        submit -- |Submit Application| --> applications(Applications)
-        process -- |Process Application| --> processed(Processed Applications)
-        confirmation -- |Send Confirmation| --> sent(Sent Confirmations)
-    end
+```
 
 <a id="console"></a>
 
@@ -70,6 +45,32 @@ graph LR
 
 ```bash  
 clean test
+```
+graph LR
+    subgraph User
+        input[Ввод Ключевых Слов] --> search(Поиск)
+        search -- |Получение Вакансий| --> display(Отображение Вакансий)
+        display -- |Выбор Вакансии| --> apply(Отправка Заявки)
+        apply -- |Отправка Заявки| --> confirmation(Подтверждение)
+    end
+
+    subgraph Сайт
+        search -- |Получение Вакансий| --> retrieve(Получение Вакансий)
+        retrieve -- |Фильтрация и Сортировка| --> filter(Фильтрация Вакансий)
+        filter -- |Отображение Вакансий| --> display
+        apply -- |Отправка Заявки| --> submit(Отправка Заявки)
+        submit -- |Обработка Заявки| --> process(Обработка Заявки)
+        process -- |Отправка Подтверждения| --> confirmation
+    end
+
+    subgraph База Данных
+        retrieve -- |Получение Вакансий| --> jobs(Вакансии)
+        filter -- |Фильтрация Вакансий| --> filtered(Отфильтрованные Вакансии)
+        filtered -- |Сортировка Вакансий| --> sorted(Отсортированные Вакансии)
+        submit -- |Отправка Заявки| --> applications(Заявки)
+        process -- |Обработка Заявки| --> processed(Обработанные Заявки)
+        confirmation -- |Отправка Подтверждения| --> sent(Отправленные Подтверждения)
+    end
 ```
 
 <a id="jenkins"></a>
