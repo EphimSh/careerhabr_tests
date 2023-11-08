@@ -39,13 +39,32 @@
 - <code>Selenoid</code> — использовался для быстрого прогона тестов с возможностью получения видеозаписей тестов.
 
 ```mermaid
----
-title: Order example
----
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+graph LR
+    subgraph User
+        input[Ввод Ключевых Слов] --> search(Поиск)
+        search -- |Получение Вакансий| --> display(Отображение Вакансий)
+        display -- |Выбор Вакансии| --> apply(Отправка Заявки)
+        apply -- |Отправка Заявки| --> confirmation(Подтверждение)
+    end
+
+    subgraph Сайт
+        search -- |Получение Вакансий| --> retrieve(Получение Вакансий)
+        retrieve -- |Фильтрация и Сортировка| --> filter(Фильтрация Вакансий)
+        filter -- |Отображение Вакансий| --> display
+        apply -- |Отправка Заявки| --> submit(Отправка Заявки)
+        submit -- |Обработка Заявки| --> process(Обработка Заявки)
+        process -- |Отправка Подтверждения| --> confirmation
+    end
+
+    subgraph База Данных
+        retrieve -- |Получение Вакансий| --> jobs(Вакансии)
+        filter -- |Фильтрация Вакансий| --> filtered(Отфильтрованные Вакансии)
+        filtered -- |Сортировка Вакансий| --> sorted(Отсортированные Вакансии)
+        submit -- |Отправка Заявки| --> applications(Заявки)
+        process -- |Обработка Заявки| --> processed(Обработанные Заявки)
+        confirmation -- |Отправка Подтверждения| --> sent(Отправленные Подтверждения)
+    end
+
 ```
 
 
