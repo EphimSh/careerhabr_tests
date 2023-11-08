@@ -78,12 +78,19 @@
             }
           },
           "age": {
-            "type": "object",
-            "properties": {
-              "title": { "type": "string" },
-              "value": { "type": "integer" }
-            },
-            "required": ["title", "value"]
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "value": { "type": "integer" }
+                },
+                "required": ["title", "value"]
+              },
+              {
+                "type": "null"
+              }
+            ]
           },
           "experience": {
             "type": "object",
