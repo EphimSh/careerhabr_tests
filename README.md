@@ -1,6 +1,6 @@
 # [career.habr.com](https://career.habr.com/) autotests
 
-<h1>Демопроект автоматизации ui-тестов на career.habr</h1>
+<h1>Демопроект автоматизации тестов на поиск вакансии и специалистов на сайте career.habr</h1>
 
 ##  Содержание 
 
