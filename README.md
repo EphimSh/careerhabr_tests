@@ -44,13 +44,6 @@ erDiagram
     JOB_SEARCH ||--o{ FILTER : applies
     JOB_SEARCH ||--o{ USER : initiates
     JOB_SEARCH }|..|{ LOCATION : uses
-
-    style JOB_SEARCH fill:#fff,stroke:#333,stroke-width:2px;
-    style JOB fill:#fff,stroke:#333,stroke-width:2px;
-    style FILTER fill:#fff,stroke:#333,stroke-width:2px;
-    style USER fill:#fff,stroke:#333,stroke-width:2px;
-    style LOCATION fill:#fff,stroke:#333,stroke-width:2px;
-
 ```
 
 
